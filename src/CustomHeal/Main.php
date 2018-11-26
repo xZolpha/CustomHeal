@@ -4,10 +4,11 @@ namespace CustomHeal;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 
-class Main{
+class Main extends PluginBase implements Listener{
 
 	public function onEnable(): void{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
